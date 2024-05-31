@@ -20,5 +20,6 @@ from myapp.views import MathlibList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/gameresult/', include('gptapi.urls')),
     path('api/v1/gametype/', include('myapp.urls'))
 ]

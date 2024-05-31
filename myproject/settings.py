@@ -24,6 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+API_KEY = os.getenv('GPT_API_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gptapi',
     'myapp',
     'rest_framework'
 ]
@@ -137,4 +140,4 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 # 환경 변수 읽기
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DATABASE_URL = os.getenv('DATABASE_URL')
-API_KEY = os.getenv('API_KEY')
+API_KEY = os.getenv('GPT_API_KEY')
