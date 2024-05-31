@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from myapp.views import MathlibList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/gameresult/', include('gptapi.urls'))
+    path('api/v1/gameresult/', include('gptapi.urls')),
+    path('api/v1/gametype/', include('myapp.urls'))
 ]
