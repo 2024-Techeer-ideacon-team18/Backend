@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'gptapi',
     'myapp',
-    'rest_framework'
+    'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -140,4 +141,7 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 # 환경 변수 읽기
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DATABASE_URL = os.getenv('DATABASE_URL')
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}
 API_KEY = os.getenv('GPT_API_KEY')
