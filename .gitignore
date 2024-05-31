@@ -1,0 +1,16 @@
+# 가상환경 폴더
+myenv/
+
+# Python 컴파일 파일
+__pycache__/
+*.pyc
+
+# 데이터베이스 파일
+db.sqlite3
+
+# 기타 불필요한 파일
+*.pyo
+*.pyd
+*.swp
+*.swo
+.env
